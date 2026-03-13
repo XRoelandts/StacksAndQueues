@@ -47,3 +47,5 @@ in O(n/2).
 
 
 7.Analysis
+
+Time complexity of Decode O(n)
