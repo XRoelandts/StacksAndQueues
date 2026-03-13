@@ -1,0 +1,49 @@
+1. Stacking
+push(1)
+  this would add a 1 to the stack [1]
+
+push(20)
+  this would add a 20 to the stack [1, 20]
+
+pop()
+  the 20 would be removed from the stack following the principles of last in first out [1]
+
+push(pop()*2)
+  pop would be executed first which leads to push(1*2) which is push(2) so now the queue is [2]
+
+push(0)
+  this would add 0 to the stack [2, 0]
+
+push(pop()/2)
+  0 would be removed which is push(0/2) which is push(0) so it would be [2, 0]
+
+
+2.Queueing
+push()
+  this would add 2 to the queue [2]
+
+push(pop()+4)
+  this would remove 2 then push(2+4) which is push(6) so the queue is now [6]
+
+push(5)
+  this would add 5 to the queue [6, 5]
+
+push(pop()/2)
+  this would remove 6 then push(6/2) which is push(3) so the queue is now [5, 3]
+
+pop()
+  this would remove 5 so the queue is now [3]
+
+pop()
+  this would p remove 3 so now the queue is empty again []
+
+3. Find in deque
+We discussed that using a doubly-linked list, you can search for an
+element in O(n/2), the same is true for a deque.
+Given an array-based Deque q and an element y, provide an algorithm that finds the position in a deque
+in O(n/2).
+
+
+
+
+7.Analysis
