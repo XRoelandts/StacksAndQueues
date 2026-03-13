@@ -16,21 +16,15 @@ public class Decode {
 
         for (char ch : s.toCharArray()) {
 
-            // If digit → build full number (handles multi-digit like 12[a])
             if (Character.isDigit(ch)) {
                 k = k * 10 + (ch - '0');
-            }
-
-            // Opening bracket → push state
-            else if (ch == '[') {
+            } else if (ch == '[') {
                 countStack.push(k);
                 stringStack.push(currentString);
 
                 currentString = "";
                 k = 0;
-            }
-            // Closing bracket → decode
-            else if (ch == ']') {
+            } else if (ch == ']') {
                 int repeat = countStack.pop();
                 String previous = stringStack.pop();
 
@@ -41,10 +35,7 @@ public class Decode {
                 }
 
                 currentString = temp.toString();
-            }
-
-            // Letter → build current substring
-            else {
+            } else {
                 currentString += ch;
             }
         }
